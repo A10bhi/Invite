@@ -448,7 +448,7 @@
   /* ---------- Details / event cards ---------- */
   .details-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 1.5rem;
     margin: 3rem 0;
   }
@@ -630,9 +630,10 @@
     .side-nav { display: none; }
   }
 
-  @media (max-width: 720px) {
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 130px; }
-    .hero-decor { display: none; }
+  @media (max-width: 900px) {
+  .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); grid-auto-rows: 130px; }
+  .hero-decor { display: none; }
+  .details-cards { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
   }
 
   /* ---------- Reduced motion ---------- */
