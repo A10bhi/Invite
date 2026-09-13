@@ -9,7 +9,7 @@
   CUSTOMIZATION NOTES
   1. Media files: place "ganesh.jpg", "wedding.mp4", and "image1.jpg" through "image6.jpg" in the same folder as this HTML file.
      image1 = bride (tall slot), image2 = groom (tall slot), image3–image6 = landscape shots.
-  2. Countdown / calendar target the Barat time (2 Dec 2026, 4:00 PM) — search "2026-12-02T16:00:00" to change it.
+  2. Countdown / calendar target the Vivah time (2 Dec 2026, 4:00 AM) — search "2026-12-02T04:00:00" to change it.
   3. Venue link: search the Google Maps URL under the Venue section to update it.
   4. Colors live as CSS variables at the top of <style> under :root.
   5. The "Our Story" section from the original template was left out since no story details were provided —
@@ -438,6 +438,9 @@
   .gallery { background: var(--paper); }
   .venue { background: var(--paper-deep); }
 
+  #events .section-inner { padding-bottom: 2rem; }
+  #gallery .section-inner { padding-top: 2rem; }
+
   .section-title { font-size: clamp(2rem, 5vw, 2.75rem); color: var(--ink); margin-bottom: 1.25rem; }
 
   .details-copy { max-width: 560px; margin: 0 auto; color: var(--ink-soft); }
@@ -752,37 +755,27 @@
       <div class="details-card reveal">
         <svg class="blossom-icon small" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"></use></svg>
         <h3>Tilak</h3>
-        <p>25 November 2026</p>
+        <p>25 November 2026<br>6:30 PM</p>
       </div>
       <div class="details-card reveal">
         <svg class="blossom-icon small" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"></use></svg>
         <h3>Mehndi</h3>
-        <p>28 November 2026<br>11:30 AM</p>
+        <p>29 November 2026<br>11:30 AM</p>
       </div>
       <div class="details-card reveal">
         <svg class="blossom-icon small" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"></use></svg>
         <h3>Sangeet</h3>
-        <p>28 November 2026<br>6:30 PM</p>
+        <p>29 November 2026<br>6:30 PM</p>
       </div>
       <div class="details-card reveal">
         <svg class="blossom-icon small" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"></use></svg>
         <h3>Haldi</h3>
-        <p>29–30 November 2026</p>
-      </div>
-      <div class="details-card reveal">
-        <svg class="blossom-icon small" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"></use></svg>
-        <h3>Barat</h3>
-        <p>2 December 2026<br>4:00 PM</p>
-      </div>
-      <div class="details-card reveal">
-        <svg class="blossom-icon small" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"></use></svg>
-        <h3>Jaimala</h3>
-        <p>2 December 2026<br>5:00 PM</p>
+        <p>30 November 2026</p>
       </div>
       <div class="details-card reveal">
         <svg class="blossom-icon small" viewBox="0 0 100 100" aria-hidden="true"><use href="#blossom"></use></svg>
         <h3>Vivah</h3>
-        <p>3 December 2026<br>4:00 AM</p>
+        <p>2 December 2026<br>4:00 PM</p>
       </div>
     </div>
 
@@ -793,7 +786,7 @@
     </div>
 
     <div class="countdown reveal">
-      <p class="eyebrow center">Counting Down To The Barat</p>
+      <p class="eyebrow center">Counting Down To The Vivah</p>
       <div class="countdown-grid">
         <div class="countdown-unit"><span id="cd-days">00</span><label>Days</label></div>
         <div class="countdown-unit"><span id="cd-hours">00</span><label>Hours</label></div>
@@ -954,8 +947,8 @@
     sections.forEach(function (sec) { navObserver.observe(sec); });
   }
 
-  /* ---------- Countdown (targets the Barat) ---------- */
-  var target = new Date('2026-12-02T16:00:00').getTime();
+  /* ---------- Countdown (targets the Vivah) ---------- */
+  var target = new Date('2026-12-02T04:00:00').getTime();
   var daysEl = document.getElementById('cd-days');
   var hoursEl = document.getElementById('cd-hours');
   var minsEl = document.getElementById('cd-mins');
@@ -991,9 +984,9 @@
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
       'BEGIN:VEVENT',
-      'SUMMARY:Mamta \u0026 Abhishek\u2019s Wedding \u2014 Barat',
-      'DTSTART:20261202T160000',
-      'DTEND:20261202T220000',
+      'SUMMARY:Mamta \u0026 Abhishek\u2019s Wedding \u2014 Vivah',
+      'DTSTART:20261202T040000',
+      'DTEND:20261202T080000',
       'LOCATION:SAS One Farms',
       'DESCRIPTION:We look forward to celebrating with you!',
       'END:VEVENT',
